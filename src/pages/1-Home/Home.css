@@ -1,0 +1,59 @@
+.hero{
+    background-image: url("/public/bg.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.ch1{
+    background-image: url("/public/asd.png");
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+}
+
+.ch2{
+    background-image: url("/public/asd1.png");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+
+}
+
+.ch3{
+    background-image: url("/public/asd3.png");
+    background-position: center;
+    background-size: cover;
+    height: 360px;
+
+}
+
+
+.ch4{
+    background-image: url("/public/asd2.png");
+    background-position: center;
+    background-size: cover;
+    height: 360px;
+
+}
+
+
+.carousel-caption {
+    position: absolute;
+    left: 10% !important;
+    bottom: 1.25rem;
+    text-align: start !important;
+    /* left: 30px !important; */
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.d-flex {
+    display:  block !important;
+    
+}
+
+

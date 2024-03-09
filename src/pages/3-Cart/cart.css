@@ -1,0 +1,17 @@
+.cart{
+
+}
+@media(max-width:570px){
+    .cart{
+        width: 100% !important;
+        background-color: rgb(210, 220, 220);
+        margin: auto;
+    }
+    .pro{
+      scale: .85;
+      border: none !important;
+      margin-right: 400px;
+gap: 10px;
+
+    }
+}

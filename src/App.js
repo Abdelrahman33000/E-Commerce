@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import {Routes , Route  ,useLocation} from 'react-router-dom'
+import { Cart, Checkout, Home, Products, SignUp } from './pages';
+import { Footer, Navbar } from './component';
+import Login from './pages/Login/Login';
 
 function App() {
+
+  const location = useLocation();
+  const isLoginPage = location.pathname === '/';
+  const isSignUpPage = location.pathname === '/signup';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div style={{overflowX:"hidden"}}>
+{/* <Navbar /> */}
+
+{!isLoginPage  && <Navbar /> && !isSignUpPage && <Navbar />}
+<Routes>
+  <Route path='/' element={<Login />}  />
+  <Route path='/signup' element={<SignUp />}  />
+  
+  <Route path='/home' element={<Home />}  />
+  <Route path='/products' element={<Products />}  />
+  <Route path='/cart' element={<Cart />}  />
+  <Route path='/checkout' element={<Checkout />} />
+
+  
+</Routes>
+<Footer />
+</div>
   );
 }
 

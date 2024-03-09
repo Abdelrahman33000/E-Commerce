@@ -1,0 +1,8 @@
+.signup{
+  background-image: url('/public/backgr.svg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+}
+

@@ -1,0 +1,5 @@
+export {default as Home } from './1-Home/Home'
+export {default as SignUp } from './SignUp/SignUp'
+export {default as Products } from './2-Products/Products' 
+export {default as Cart } from './3-Cart/Cart' 
+export {default as Checkout } from './checkout/Checkout'
