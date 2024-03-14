@@ -67,7 +67,7 @@ const Card = (props) => {
     </div>
     <button  className='btn btn-dark ' style={{position:"absolute" , top:"58%", right:"0", left:"0"}} onClick={addToCart}>
     <BsCart3 /> Add To Cart </button>
-      <div className="card-icons ">
+      {/* <div className="card-icons "> */}
         
 <div className='d-flex    pe-2 my-2' style={{backgroundColor:"#615d5d" ,width:"35px",height:"35px", borderRadius:"50%", alignItems:"center"}}>
             <i className="fa fa-heart" style={{ color: heartColor }} onClick={toggleHeartColor}></i>
