@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { BsTrash3 } from "react-icons/bs";
 import {Button} from 'react-bootstrap'
 import ComponentInput2 from './ComponentInput2';
-
+import Stepper1 from '../../component/Steper';
+import './Checkout .css'
 const Checkout = () => {
   const [cartItems, setCheckoutItems] = useState([]);
 
@@ -37,6 +38,7 @@ const Checkout = () => {
 
   const [checkout, setCheckout] = useState(true)
   const [order, setOrder] = useState(false)
+  const [myOrder , setMyOrder] = useState(false)
   return (
     <>
     
@@ -54,6 +56,7 @@ const Checkout = () => {
       <input type="checkbox" name="" id=""  className='my-5'/> <span>  Save this information for faster check-out next time</span>
   
 </div>
+
 <div>
 
 
@@ -127,19 +130,92 @@ const Checkout = () => {
 
 
 
-{order && <div className='my-5 d-flex flex-column w-100 justify-content-center align-items-center'>
+{order && <div className='my-5  d-flex flex-column w-100 justify-content-center align-items-center'>
   <h1><b>SUCCESS!</b></h1>
 <div className='w-50'>
     <img src="/pic1.png" alt="" style={{width:"100%"}}/>
   
 </div>  <p>Your order will be delivered soon. <br />
 Thank you for choosing our app!</p>
-<button className='btn btn-dark py-2 px-5 w-50'> Track your orders </button> <br /> <br />
+<button className='btn btn-dark py-2 px-5 w-50' onClick={() => {
+  setCheckout(false);
+  setOrder(false);
+  setMyOrder(true);
+}
+}> Track your orders </button> <br /> <br />
 <button className='btn btn-dark py-2 px-5 w-50'>Back To Home</button>
   
   </div>}
 
+{myOrder&& <div className=' order ' >
+<div className='w-50 mx-auto bg-dark rounded-5 text-light py-1 pb-5'>
+  <h2 className='my-5' style={{textAlign:"center " }}> My Order </h2>
+  
+<div className='my-5'>
+      <Stepper1  />
+  
+</div>
+<div style={{backgroundColor:"#353537"}} className='w-50 rounded-3 p-2 mx-auto'>
+ <div className='d-flex justify-content-between'>
+   <p> Order No238562312 </p>
+   <p> <span className='opacity-50'>20/03/2020</span></p>
+ </div>
+  <hr style={{fontWeight:"bolder"}} />
+  <div className='d-flex justify-content-between'>
+   <p><span className='opacity-50'> Quantity:</span> 03 </p>
+   <p> <span className='opacity-50'>Total Amount:</span> $150</p>
+ </div>
 
+ <div className='d-flex justify-content-between'>
+   <button className='bg-dark px-3'>Detail </button>
+   <p>Processing </p>
+ </div>
+
+</div>
+
+
+<div style={{backgroundColor:"#353537"}} className='w-50 rounded-3 p-2 mx-auto my-5 '>
+ <div className='d-flex justify-content-between'>
+   <p> Order No238562312 </p>
+   <p> <span className='opacity-50'>20/03/2020</span></p>
+ </div>
+  <hr style={{fontWeight:"bolder"}} />
+  <div className='d-flex justify-content-between'>
+   <p><span className='opacity-50'> Quantity:</span> 03 </p>
+   <p> <span className='opacity-50'>Total Amount:</span> $150</p>
+ </div>
+
+ <div className='d-flex justify-content-between'>
+   <button className='bg-dark px-3'>Detail </button>
+   <p style={{color:"green"}}>Delivered </p>
+ </div>
+
+</div>
+
+
+
+<div style={{backgroundColor:"#353537"}} className='w-50 rounded-3 p-2 mx-auto mb-5'>
+ <div className='d-flex justify-content-between'>
+   <p> Order No238562312 </p>
+   <p> <span className='opacity-50'>20/03/2020</span></p>
+ </div>
+  <hr style={{fontWeight:"bolder"}} />
+  <div className='d-flex justify-content-between'>
+   <p><span className='opacity-50'> Quantity:</span> 03 </p>
+   <p> <span className='opacity-50'>Total Amount:</span> $150</p>
+ </div>
+
+ <div className='d-flex justify-content-between'>
+   <button className='bg-dark px-3'>Detail </button>
+   <p style={{color:"red"}}>Canceled </p>
+ </div>
+
+</div>
+
+
+</div>
+
+</div>}
 
     </>
 

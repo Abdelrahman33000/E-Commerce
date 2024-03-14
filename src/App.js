@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Routes , Route  ,useLocation} from 'react-router-dom'
-import { Cart, Checkout, Home, Products, SignUp } from './pages';
+import { Cart, Checkout, Home, Install, Products, SignUp } from './pages';
 import { Footer, Navbar } from './component';
 import Login from './pages/Login/Login';
 
@@ -24,6 +24,7 @@ function App() {
   <Route path='/products' element={<Products />}  />
   <Route path='/cart' element={<Cart />}  />
   <Route path='/checkout' element={<Checkout />} />
+  <Route path='/install' element={<Install />} />
 
   
 </Routes>
