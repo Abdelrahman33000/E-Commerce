@@ -54,20 +54,20 @@ const Card = (props) => {
 
   const [isRed, setIsRed] = useState(false);
 
-  const handleClick = () => {
-    setIsRed(!isRed);
-  };
+  // const handleClick = () => {
+  //   setIsRed(!isRed);
+  // };
 
 
   return (
     <div className="card  my-3  " style={{height:"460px"}}>
          <div>
-      <img src={props.img} alt="Card" className="card-image" style={{height:"300px"}} />
-      <i className={`fa${isRed ? 's' : 'r'} fa-heart`} onClick={handleClick} style={{ color: isRed ? 'red' : 'white', cursor: 'pointer' }}></i>
+      <img src={props.img} alt="Card" className="card-image mb-3" style={{height:"300px"}} />
+      {/* <i className={`fa${isRed ? 's' : 'r'} fa-heart`} onClick={handleClick} style={{ color: isRed ? 'red' : 'white', cursor: 'pointer' }}></i> */}
     </div>
     <button  className='btn btn-dark ' style={{position:"absolute" , top:"58%", right:"0", left:"0"}} onClick={addToCart}>
     <BsCart3 /> Add To Cart </button>
-      {/* <div className="card-icons "> */}
+      <div className="card-icons ">
         
 <div className='d-flex    pe-2 my-2' style={{backgroundColor:"#615d5d" ,width:"35px",height:"35px", borderRadius:"50%", alignItems:"center"}}>
             <i className="fa fa-heart" style={{ color: heartColor }} onClick={toggleHeartColor}></i>
